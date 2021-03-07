@@ -1,7 +1,8 @@
 import React from "react";
+import styled from "styled-components";
 import logo from "./logo.svg";
 
-const css = `
+export default styled(App)`
   text-align: center;
 
   .App-logo {
@@ -40,9 +41,9 @@ const css = `
   }
 `;
 
-function App() {
+function App({ className }) {
   return (
-    <div css={css}>
+    <div className={className}>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -60,5 +61,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
